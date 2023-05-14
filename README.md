@@ -1,70 +1,20 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# About the project
+This is a React functional component that fetches a text file from an external URL, counts the frequency of words in the text, and displays a histogram chart of the top 20 most frequent words using the Recharts library. It also allows the user to export the histogram data as a CSV file.
 
-## Available Scripts
+## Here is an overview of the components and their functionalities in this code:
 
-In the project directory, you can run:
+- `App`: This is the main component that renders the entire application. It contains the state for `wordCounts`, which is initially set to `null` and gets updated with an array of objects containing the top 20 most frequent words and their counts after the `fetchWordCounts` function is called.
 
-### `npm start`
+- `fetchWordCounts`: This asynchronous function fetches the text file from the external URL, converts the text into an array of lowercase words, counts the frequency of each word using an object, sorts the words by frequency in descending order, selects the top 20 words, and sets the state for `wordCounts` with an array of objects containing each word and its count.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- `exportCSV`: This function generates a CSV file from the `wordCounts` data and allows the user to download the file when they click the "Export CSV" button.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- `BarChart`, `Bar`, `XAxis`, `YAxis`, `CartesianGrid`, `Tooltip`, `Legend`, and `ResponsiveContainer`: These are components from the Recharts library that render the histogram chart. `BarChart` is the main component that renders the chart itself, and it takes in the data from `wordCounts`. `Bar` is a child component of `BarChart` that represents each bar in the chart. `XAxis` and `YAxis` represent the x and y axes of the chart, respectively. `CartesianGrid` adds a grid to the chart. `Tooltip` displays the count value of each bar when the user hovers over it. `Legend` adds a legend to the chart. `ResponsiveContainer` allows the chart to be responsive to the size of the container it's in.
 
-### `npm test`
+- `exportCSV` button: This button allows the user to download the `wordCounts` data as a CSV file when clicked.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Overall, this code fetches and counts the frequency of words in a text file, displays the top 20 most frequent words in a histogram chart using Recharts, and allows the user to download the data as a CSV file.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Preview of the application
+- https://thunderous-rabanadas-1591f6.netlify.app/

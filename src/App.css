@@ -1,5 +1,9 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .App-logo {
@@ -34,5 +38,100 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+.gradientButton{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  
+  border: none;
+  
+  border-radius: 999px;
+  background: rgb(64,94,241);
+background: linear-gradient(227deg, rgba(64,94,241,1) 0%, rgba(236,52,90,1) 80%);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.gradientButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+th {
+  font-weight: bold;
+  text-align: left;
+}
+
+button {
+  margin-right: 20px;
+}
+
+svg {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  
+  background: linear-gradient(to bottom right, #fdcbf1, #e6f3ff);
+  
+}
+
+.export{
+  position:sticky;
+  position: -webkit-sticky;
+  top: 50%;
+  bottom: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+ 
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  
+  border: none;
+  
+  border-radius: 999px;
+  background: rgb(64,94,241);
+background: linear-gradient(227deg, rgba(64,94,241,1) 0%, rgba(236,52,90,1) 80%);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+@media (max-width: 600px) {
+  .export {
+    font-size: larger;
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .export {
+    font-size: smaller;
+    padding: 0.5rem 1rem;
+  }
+}
+@media (max-width: 320px) {
+  .export {
+    font-size: small;
+    padding: 0%;
   }
 }
